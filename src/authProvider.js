@@ -4,10 +4,11 @@ export default (type, params) => {
     // called when the user attempts to log in
     if (type === AUTH_LOGIN) {
         const { username, password } = params;
-        const request = new Request('https://monitoring-api.herokuapp.com/api/v1/user/login/128512/akbar512/0', {
+        const request = new Request('http://monitoring-api.herokuapp.com/api/v1/user/login/128512/akbar512/0', {
             method: 'GET',
             // body: JSON.stringify({ username, password }),
-             headers: new Headers({ 'Content-Type': 'application/json' , 'Authorization': 'ApiAuth api_key=DMA128256512AI'}),
+             headers: new Headers({ 'Content-Type': 'application/json' ,
+              'Authorization': 'ApiAuth api_key=DMA128256512AI' ,'Access-Control-Allow-Origin:':'*'}),
         })
         return fetch(request)
             .then(response => {
