@@ -12,7 +12,8 @@ export default (type, params) => {
             method: 'POST',
             body: JSON.stringify({ username, password }),
              headers: new Headers({'Content-Type': 'application/json','Authorization': 'ApiAuth api_key=DMA128256512AI'
-             ,'Access-Control-Allow-Origin':'*'}),
+             ,'Access-Control-Allow-Origin':'*', 'Access-Control-Request-Method':'POST' ,
+             'Access-Control-Allow-Origin':'https://monitoring-api.herokuapp.com'}),
         })
         return fetch(request)
             .then(response => {
