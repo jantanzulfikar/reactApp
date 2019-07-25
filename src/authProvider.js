@@ -2,7 +2,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
 
 export default (type, params) => {
     // called when the user attempts to log in
-    console.log("STARTING")
+    console.log("STARTING+++")
     if (type === AUTH_LOGIN) {        
         console.log("userName : " + username);
         console.log("password : " + password);
