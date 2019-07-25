@@ -2,7 +2,9 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
 
 export default (type, params) => {
     // called when the user attempts to log in
-    if (type === AUTH_LOGIN) {
+    if (type === AUTH_LOGIN) {        
+        console.log("userName : " + username);
+        console.log("password : " + password);
         const { username, password } = params;
         const request = new Request('http://monitoring-api.herokuapp.com/api/v1/user/login', {
             method: 'POST',
