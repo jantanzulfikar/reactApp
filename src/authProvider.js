@@ -5,6 +5,7 @@ export default (type, params) => {
     console.log("STARTING+++---")
     if (type === AUTH_LOGIN) {
         const { username, password } = params;
+        console.log("GET PARM")
         console.log("userName : " + username);
         console.log("password : " + password);
         const request = new Request('http://monitoring-api.herokuapp.com/api/v1/user/login', {
