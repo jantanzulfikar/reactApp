@@ -11,7 +11,8 @@ export default (type, params) => {
         const request = new Request('https://monitoring-api.herokuapp.com/api/v1/user/loginAdmin', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
-             headers: new Headers({'Content-Type': 'application/json','Authorization': 'ApiAuth api_key=DMA128256512AI'}),
+             headers: new Headers({'Content-Type': 'application/json','Authorization': 'ApiAuth api_key=DMA128256512AI'
+             ,'Access-Control-Allow-Origin':'*'}),
         })
         return fetch(request)
             .then(response => {
