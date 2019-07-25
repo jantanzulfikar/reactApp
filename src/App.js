@@ -10,18 +10,10 @@ import UserIcon from '@material-ui/icons/Group';
 import Dashboard from './Dashboard';
 import authProvider from './authProvider';
 import dataProvider from './dataProvider';
-import simpleRestProvider from 'ra-data-simple-rest';
 // ini dataProvider contoh yang udah di sediain balikan json untuk testing
 // const dataProvider = jsonServerProvider('http://jsonplaceholder.typicode.com');
 
-const httpClient = (url, options = {}) => {
-    if (!options.headers) {
-        options.headers = new Headers({ Accept: 'application/json' });
-    }
-    const token = localStorage.getItem('token');
-    options.headers.set('Authorization', `Bearer ${token}`);
-    return fetchUtils.fetchJson(url, options);
-}
+
 
 
 const App = () => (
