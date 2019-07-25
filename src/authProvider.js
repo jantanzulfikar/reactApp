@@ -9,11 +9,10 @@ export default (type, params) => {
         console.log("userName : " + username);
         console.log("password : " + password);
         const request = new Request('https://monitoring-api.herokuapp.com/api/v1/user/loginAdmin', {
-            method: 'POST',
+            method: 'OPTIONS',
             body: JSON.stringify({ username, password }),
              headers: new Headers({'Content-Type': 'application/json','Authorization': 'ApiAuth api_key=DMA128256512AI'
-             ,'Access-Control-Allow-Origin':'*', 'Access-Control-Request-Method':'POST' ,
-             'Access-Control-Allow-Origin':'https://monitoring-api.herokuapp.com'}),
+             ,'Access-Control-Allow-Origin':'*' }),
         })
         return fetch(request)
             .then(response => {
