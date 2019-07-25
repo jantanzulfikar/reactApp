@@ -12,7 +12,7 @@ export default (type, params) => {
             method: 'POST',
             body: JSON.stringify({ username, password }),
              headers: new Headers({'Content-Type': 'application/json','Authorization': 'ApiAuth api_key=DMA128256512AI'
-             ,'Access-Control-Allow-Origin':'*' , 'AllowedOrigins':'*' , 'AllowCredentials':true}),
+             ,'Access-Control-Allow-Origin':'*'}),
         })
         return fetch(request)
             .then(response => {
