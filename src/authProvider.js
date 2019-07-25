@@ -8,7 +8,7 @@ export default (type, params) => {
         console.log("GET PARM")
         console.log("userName : " + username);
         console.log("password : " + password);
-        const request = new Request('http://monitoring-api.herokuapp.com/api/v1/user/login', {
+        const request = new Request('http://monitoring-api.herokuapp.com/api/v1/user/loginAdmin', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
              headers: new Headers({ 'Content-Type': 'application/json' ,
