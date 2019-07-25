@@ -22,7 +22,7 @@ const httpClient = (url, options = {}) => {
     options.headers.set('Authorization', `Bearer ${token}`);
     return fetchUtils.fetchJson(url, options);
 }
-const dataProvider = simpleRestProvider('https://monitoring-api.herokuapp.com', httpClient);
+
 
 const App = () => (
   <Admin dataProvider={dataProvider} dashboard={Dashboard} authProvider={authProvider} >
