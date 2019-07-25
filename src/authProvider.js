@@ -2,6 +2,7 @@ import { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } from 'react-admin';
 
 export default (type, params) => {
     // called when the user attempts to log in
+    console.log("STARTING")
     if (type === AUTH_LOGIN) {        
         console.log("userName : " + username);
         console.log("password : " + password);
@@ -10,7 +11,7 @@ export default (type, params) => {
             method: 'POST',
             body: JSON.stringify({ username, password }),
              headers: new Headers({ 'Content-Type': 'application/json' ,
-              'Authorization': 'ApiAuth api_key=DMA128256512AI'})
+              'Authorization': 'ApiAuth api_key=DMA128256512AI'}),
         })
         return fetch(request)
             .then(response => {
